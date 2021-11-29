@@ -3,46 +3,59 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static final  ThemeData lightTheme=ThemeData(
       brightness: Brightness.light,
-      primaryColor: Colors.amberAccent,
-      scaffoldBackgroundColor: Colors.amber,
-      canvasColor: Colors.white,
-      appBarTheme: AppBarTheme(
-        color: Colors.amber[500],
-        iconTheme: const IconThemeData(color: Colors.green),
+      primaryColor: const Color(0xffFFFFFF),
+      scaffoldBackgroundColor:  const Color(0xffF8FBFF),
+      canvasColor: const Color(0xffFFFFFF),
+      appBarTheme: const AppBarTheme(
+        color: Colors.white,
+        iconTheme:  IconThemeData(color: Color(0xff292D32)),
       ),
-      textTheme: TextTheme(
-        bodyText1: const TextStyle(
-            color: Colors.grey
+      iconTheme: IconThemeData(
+          color: Color(0xff292D32)
+      ),
+      textTheme:const TextTheme(
+        bodyText1:  TextStyle(
+            color: Colors.black,
+          fontSize: 16
         ),
-        bodyText2: TextStyle(color: Colors.green[800]),
-        headline4: TextStyle(color: Colors.green[800]),
+        bodyText2: TextStyle(color: Colors.white),
+        headline1: TextStyle(color: Colors.white,fontSize: 21,fontWeight: FontWeight.bold),
+        headline2: TextStyle(color: Color(0xff233558),fontSize: 15,fontWeight: FontWeight.w600),
+        headline4: TextStyle(color: Colors.white),
+        headline6: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 17),
       ),
       unselectedWidgetColor: Colors.blue[400],
       buttonTheme: const ButtonThemeData(
-        buttonColor: Colors.blueAccent,
+        buttonColor: Color(0xff3879F0),
         textTheme: ButtonTextTheme.primary,
       )
   );
 
   static final ThemeData darkTheme=ThemeData(
-      brightness: Brightness.light,
-      primaryColor: Colors.blueGrey,
-      scaffoldBackgroundColor: Colors.blueGrey,
-      canvasColor: Colors.grey,
+      brightness: Brightness.dark,
+      primaryColor: Color(0xff191C47),
+      scaffoldBackgroundColor: Color(0xff191C47),
+      canvasColor: Color(0xff191C47 ),
+      iconTheme: IconThemeData(
+          color: Color(0xffffffff)
+      ),
       appBarTheme: AppBarTheme(
-        color: Colors.blueGrey[500],
-        iconTheme: const IconThemeData(color: Colors.blueGrey),
+        color: Color(0xff3879F0),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       textTheme: TextTheme(
         bodyText1: const TextStyle(
-            color: Colors.grey
+            color: Colors.white
         ),
-        bodyText2: TextStyle(color: Colors.blueGrey[800]),
-        headline4: TextStyle(color: Colors.blueGrey[800]),
+        bodyText2: TextStyle(color: Colors.white),
+        headline1: TextStyle(color: Colors.white,fontSize: 21,fontWeight: FontWeight.bold),
+        headline2: TextStyle(color: Color(0xffFFFFFF),fontSize: 15,fontWeight: FontWeight.w600),
+        headline4: TextStyle(color: Colors.white,),
+        headline6: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 17),
       ),
-      unselectedWidgetColor: Colors.blueGrey[400],
+      unselectedWidgetColor: Colors.white,
       buttonTheme: const ButtonThemeData(
-        buttonColor: Colors.blueGrey,
+        buttonColor: Colors.white,
         textTheme: ButtonTextTheme.primary,
       )
   );

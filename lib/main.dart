@@ -1,18 +1,18 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as pathProvider;
-import 'package:serviceapp/Ui/Global/theme/app_themes.dart';
-
 import 'Bloc/AppTheme/app_theme_bloc.dart';
-import 'Service/ThemeDataSave/theme_data_save.dart';
 import 'Ui/Pages/Home/home_page.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   // SystemChrome.setEnabledSystemUIOverlays([]);
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.white
+  ));
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();
   Hive.init(directory.path);
   await Hive.openBox('users');
@@ -32,9 +32,10 @@ class MyApp extends StatelessWidget {
         child: BlocBuilder<AppThemeBloc,AppThemeState>(
           builder: (context,state){
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: '360 service',
               theme: state.theme,
-              home: const MyHomePage(title: 'Flutter Demo Home Page'),
+              home:  MyHomePage(),
             );
           },
         ),
