@@ -6,6 +6,7 @@ class AppTheme {
       primaryColor: const Color(0xffFFFFFF),
       scaffoldBackgroundColor:  const Color(0xffF8FBFF),
       canvasColor: const Color(0xffFFFFFF),
+      backgroundColor: Color(0XFF233558),
       appBarTheme: const AppBarTheme(
         color: Colors.white,
         iconTheme:  IconThemeData(color: Color(0xff292D32)),
@@ -18,11 +19,11 @@ class AppTheme {
             color: Colors.black,
           fontSize: 16
         ),
-        bodyText2: TextStyle(color: Colors.white),
-        headline1: TextStyle(color: Colors.white,fontSize: 21,fontWeight: FontWeight.bold),
+        bodyText2: TextStyle(color:Color(0xff233558)),
+        headline1: TextStyle(color: Color(0xff233558),fontSize: 21,fontWeight: FontWeight.bold),
         headline2: TextStyle(color: Color(0xff233558),fontSize: 15,fontWeight: FontWeight.w600),
-        headline4: TextStyle(color: Colors.white),
-        headline6: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 17),
+        headline4: TextStyle(color: Color(0xff233558)),
+        headline6: TextStyle(color: Color(0xff233558),fontWeight: FontWeight.w600,fontSize: 16),
       ),
       unselectedWidgetColor: Colors.blue[400],
       buttonTheme: const ButtonThemeData(
@@ -35,6 +36,7 @@ class AppTheme {
       brightness: Brightness.dark,
       primaryColor: Color(0xff191C47),
       scaffoldBackgroundColor: Color(0xff191C47),
+      backgroundColor: Color(0xffffffff),
       canvasColor: Color(0xff191C47 ),
       iconTheme: IconThemeData(
           color: Color(0xffffffff)
@@ -51,7 +53,7 @@ class AppTheme {
         headline1: TextStyle(color: Colors.white,fontSize: 21,fontWeight: FontWeight.bold),
         headline2: TextStyle(color: Color(0xffFFFFFF),fontSize: 15,fontWeight: FontWeight.w600),
         headline4: TextStyle(color: Colors.white,),
-        headline6: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 17),
+        headline6: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 16),
       ),
       unselectedWidgetColor: Colors.white,
       buttonTheme: const ButtonThemeData(

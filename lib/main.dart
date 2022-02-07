@@ -6,21 +6,21 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as pathProvider;
 import 'Bloc/AppTheme/app_theme_bloc.dart';
+import 'Bloc/Category/category_cubit.dart';
+import 'Bloc/Service/service_cubit.dart';
+import 'Route/app_route.dart';
 import 'Ui/Pages/Home/home_page.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setEnabledSystemUIOverlays([]);
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.white
-  ));
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();
   Hive.init(directory.path);
   await Hive.openBox('users');
-  runApp(const MyApp());
+  runApp( MyApp( router: AppRouter(),));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final AppRouter router;
+  const MyApp({Key? key,required this.router}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -31,11 +31,22 @@ class MyApp extends StatelessWidget {
 
         child: BlocBuilder<AppThemeBloc,AppThemeState>(
           builder: (context,state){
-            return MaterialApp(
-              debugShowCheckedModeBanner: false,
-              title: '360 service',
-              theme: state.theme,
-              home:  MyHomePage(),
+            return MultiBlocProvider(
+              providers: [
+                BlocProvider<CategoryCubit>(
+                  create: (context) => CategoryCubit(),
+                ),
+                BlocProvider<ServiceCubit>(
+                  create: (context) => ServiceCubit(),
+                ),
+
+              ],
+              child: MaterialApp(
+                debugShowCheckedModeBanner: false,
+                title: '360 service',
+                theme: state.theme,
+                onGenerateRoute: router.generateRoute,
+              ),
             );
           },
         ),

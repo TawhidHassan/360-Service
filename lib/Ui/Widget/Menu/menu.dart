@@ -63,13 +63,13 @@ class _MainMenuState extends State<MainMenu> {
                   children: [
                     SizedBox(height: 60,),
                     Container(
-                      height: 120,
+                      height: 62,
                       child:Row(
                         children: [
                           CircleAvatar(
                             radius: 40.0,
                             backgroundColor: const Color(0xFF778899),
-                            child:  SvgPicture.asset('assets/svg/profile.svg'),
+                            child:  Image.asset('assets/images/user.png'),
                             // for Network image
                           ),
 
@@ -77,140 +77,100 @@ class _MainMenuState extends State<MainMenu> {
                       ),
                     ),
                     SizedBox(height: 8,),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(left:12.0),
                       child:  Text(
                         'Hey! ',
                         style: TextStyle(fontWeight: FontWeight.w400,fontSize:24 ),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                         padding: EdgeInsets.only(left:12.0),
-                        child: Text("Sifat hassan",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),)
+                        child: Text("Sifat hassan",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 30),)
                     ),
                     SizedBox(height: 10,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(left:12.0),
-                          child:  InkWell(
-                              onTap: (){
+                        InkWell(
+                            onTap: (){
 
-                              },
-                              child:MenuItem(name: "Category",asset: Icons.category,)
-                          ),
+                            },
+                            child:MenuItem(name: "Category",asset: Icons.category,isactive: true,)
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left:12.0),
-                          child:  InkWell(
-                              onTap: (){
+                        InkWell(
+                            onTap: (){
 
-                              },
-                              child:const MenuItem(name: "Review",asset:Icons.favorite_border)
-                          ),
-                        ),Padding(
-                          padding: EdgeInsets.only(left:12.0),
-                          child:  InkWell(
-                              onTap: (){
+                            },
+                            child:const MenuItem(name: "Setting",asset:Icons.settings_outlined)
+                        ),InkWell(
+                            onTap: (){
 
-                              },
-                              child:const MenuItem(name: "Setting",asset:Icons.settings_outlined)
-                          ),
-                        ),Padding(
-                          padding: EdgeInsets.only(left:12.0),
-                          child:  InkWell(
-                              onTap: (){
+                            },
+                            child:const MenuItem(name: "Review",asset:Icons.favorite_border)
+                        ),InkWell(
+                            onTap: (){
 
-                              },
-                              child:const MenuItem(name: "Setting",asset:Icons.info_outline)
-                          ),
+                            },
+                            child:const MenuItem(name: "Setting",asset:Icons.info_outline)
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left:12.0),
-                          child: Container(
-                              padding: EdgeInsets.all(12),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Icon(Icons.toggle_off_outlined,color: Colors.white,size: 27,),
-                                      SizedBox(width: 10,),
-                                      Text("Theme",style:Theme.of(context).textTheme.headline6,),
-                                      Switch(value: status, onChanged: (val) {
-                                        setState(() {
-                                          status = val;
-                                        });
-                                        print(status);
-                                        if(status){
-                                          BlocProvider.of<AppThemeBloc>(context).changeTheme(AppTheme.darkTheme);
-                                          saveLocalData!.storeThemeData(users, "AppTheme.darkTheme");
-                                        }else{
-                                          BlocProvider.of<AppThemeBloc>(context).changeTheme(AppTheme.lightTheme);
-                                          saveLocalData!.storeThemeData(users, "AppTheme.lightTheme");
-                                        }
-                                      },),
-                                      // Container(
-                                      //   height: 20,
-                                      //   child: FlutterSwitch(
-                                      //
-                                      //     valueFontSize: 25.0,
-                                      //     toggleSize: 45.0,
-                                      //     value: status,
-                                      //     borderRadius: 30.0,
-                                      //     padding: 8.0,
-                                      //     showOnOff: true,
-                                      //     onToggle: (val) {
-                                      //       setState(() {
-                                      //         status = val;
-                                      //       });
-                                      //       print(status);
-                                      //       if(status){
-                                      //         BlocProvider.of<AppThemeBloc>(context).changeTheme(AppTheme.darkTheme);
-                                      //         saveLocalData!.storeThemeData(users, "AppTheme.darkTheme");
-                                      //       }else{
-                                      //         BlocProvider.of<AppThemeBloc>(context).changeTheme(AppTheme.lightTheme);
-                                      //         saveLocalData!.storeThemeData(users, "AppTheme.lightTheme");
-                                      //       }
-                                      //     },
-                                      //   ),
-                                      // )
-                                    ],
-                                  ),
-                                ],
-                              )
-                          ),
+                        Container(
+                            padding: EdgeInsets.all(12),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Icon(Icons.toggle_off_outlined,color: Colors.white,size: 27,),
+                                    SizedBox(width: 10,),
+                                    Text("Theme",style:Theme.of(context).textTheme.headline6,),
+                                    Switch(value: status, onChanged: (val) {
+                                      setState(() {
+                                        status = val;
+                                      });
+                                      print(status);
+                                      if(status){
+                                        BlocProvider.of<AppThemeBloc>(context).changeTheme(AppTheme.darkTheme);
+                                        saveLocalData!.storeThemeData(users, "AppTheme.darkTheme");
+                                      }else{
+                                        BlocProvider.of<AppThemeBloc>(context).changeTheme(AppTheme.lightTheme);
+                                        saveLocalData!.storeThemeData(users, "AppTheme.lightTheme");
+                                      }
+                                    },),
+                                  ],
+                                ),
+                              ],
+                            )
                         )
                       ],
                     ),
                   ],
                 ),
 
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width*0.5,
-                      child: const Divider(
-                        thickness: 2, // thickness of the line
-                        indent: 20, // empty space to the leading edge of divider.
-                        endIndent: 20, // empty space to the trailing edge of the divider.
-                        color: Color(0xffE7E7E7), // The color to use when painting the line.
-                        height: 10, // The divider's height extent.
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width*0.5,
+                        child: const Divider(
+                          thickness: 2, // thickness of the line
+                          indent: 0, // empty space to the leading edge of divider.
+                          endIndent: 20, // empty space to the trailing edge of the divider.
+                          color: Color(0xffE7E7E7), // The color to use when painting the line.
+                          height: 10, // The divider's height extent.
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left:12.0),
-                      child:  InkWell(
+                      InkWell(
                           onTap: (){
 
                           },
                           child:MenuItem(name: "Sign Out",asset: Icons.logout,)
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 )
 
 

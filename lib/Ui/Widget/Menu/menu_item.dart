@@ -4,22 +4,27 @@ import 'package:flutter_svg/flutter_svg.dart';
 class MenuItem extends StatelessWidget {
   final String name;
   final IconData asset;
+  final bool isactive;
 
-  const MenuItem({Key? key, required this.name, required this.asset}) : super(key: key);
+  const MenuItem({Key? key, required this.name, required this.asset, this.isactive=false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width*0.4,
+      decoration: BoxDecoration(
+        color:isactive? Color(0xFF709FF8):Colors.transparent,
+        borderRadius: BorderRadius.circular(12),
+         ),
         padding: EdgeInsets.all(12),
         child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Icon(asset,color: Colors.white,size: 27,),
+                Icon(asset,color: Colors.white,size: 16,),
                 SizedBox(width: 10,),
-                Text(name,style:Theme.of(context).textTheme.headline6,),
-
+                Text(name,style:Theme.of(context).textTheme.headline6),
               ],
             ),
           ],
