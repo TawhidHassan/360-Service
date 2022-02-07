@@ -101,7 +101,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
       setState(() {
         isLogin?
         Navigator.pushReplacement(context, PageTransition1(MyHomePage())): Navigator.pushReplacementNamed(
-            context, LOGIN_PAGE);
+            context, CREDENTIAL_PAGE);
         // isLogin?
         // Navigator.pushReplacement(context, PageTransition1(MyHomePage())): Navigator.pushReplacement(context, PageTransition1(MyHomePage()));
       });

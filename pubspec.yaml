@@ -35,7 +35,7 @@ dependencies:
   path_provider:
   json_annotation:
   font_awesome_flutter: ^9.1.0
-
+  intro_slider: ^3.0.0
   flutter_switch: ^0.3.2
   pandabar: ^0.1.1
   lottie: ^1.2.1

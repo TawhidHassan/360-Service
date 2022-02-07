@@ -10,7 +10,7 @@ class MaterialNormalButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width*0.8,
+      width: MediaQuery.of(context).size.width,
       height: 56.0,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(

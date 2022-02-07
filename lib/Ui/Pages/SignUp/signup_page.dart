@@ -4,16 +4,18 @@ import '../../../Constants/Strings/appStrings.dart';
 import '../../Widget/Button/material_button.dart';
 import '../../Widget/TextFiekd/normal_background_textfield.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpPageState extends State<SignUpPage> {
   TextEditingController emilController= TextEditingController();
+  TextEditingController nameController= TextEditingController();
   TextEditingController passwordController= TextEditingController();
+  TextEditingController phoneController= TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,21 +43,23 @@ class _LoginPageState extends State<LoginPage> {
 
             MaterialBackgroundTextField(lable: "Email",hintText: "",controller: emilController,isNumber: false,readOnly: false,),
             SizedBox(height: 14,),
-
+            MaterialBackgroundTextField(lable: "Full Name",hintText: "",controller: nameController,isNumber: false,readOnly: false,),
+            SizedBox(height: 14,),
             MaterialBackgroundTextField(lable: "Password",hintText: "",controller: passwordController,isNumber: false,readOnly: false,),
+            SizedBox(height: 14,),
+            MaterialBackgroundTextField(lable: "Phone",hintText: "",controller: phoneController,isNumber: false,readOnly: false,),
             SizedBox(height: 14,),
 
 
+            MaterialNormalButton(color: Color(0XFF3879F0),textColor: Theme.of(context).scaffoldBackgroundColor,text: "SIGN UP",tap: (){
 
-            MaterialNormalButton(color: Color(0XFF3879F0),textColor: Theme.of(context).scaffoldBackgroundColor,text: "SIGN IN",tap: (){
-              Navigator.pushNamed(context, INTRO_PAGE);
             },),
             SizedBox(height: 14,),
             InkWell(
               onTap: (){
-                Navigator.pushNamed(context, SIGNUP_PAGE);
+                Navigator.pushNamed(context, LOGIN_PAGE);
               },
-              child: Text("Sign Up",style:Theme.of(context).textTheme.headline6,
+              child: Text("Sign In",style:Theme.of(context).textTheme.headline6,
                 textAlign: TextAlign.center,),
             ),
             SizedBox(height: 60,),

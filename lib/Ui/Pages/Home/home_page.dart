@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pandabar/main.view.dart';
 import 'package:pandabar/pandabar.dart';
-import 'package:serviceapp/Ui/Pages/Login/login_page.dart';
 import 'package:serviceapp/Ui/Widget/Menu/menu.dart';
+
+import '../Login/credential_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage();
@@ -95,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage>with SingleTickerProviderStateMi
                   if(page=="Blue"){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => CredentialPage()),
                     );
                   }
                 });
@@ -182,7 +183,7 @@ class _MyHomePageState extends State<MyHomePage>with SingleTickerProviderStateMi
                                 });
                               },
                               child: const Icon(
-                                  Icons.menu,size: 40,)
+                                  Icons.menu,size: 26,)
                           ),
                         ),
                         Text("Kuddos mia",style: Theme.of(context).textTheme.headline2,),
@@ -190,7 +191,7 @@ class _MyHomePageState extends State<MyHomePage>with SingleTickerProviderStateMi
                           children: const[
                             Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 8),
-                                child: Icon(Icons.notifications_none,size: 40,))
+                                child: Icon(Icons.notifications_none,size: 26,))
                           ],
                         ),
 
