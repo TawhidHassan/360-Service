@@ -53,13 +53,14 @@ class _MainMenuState extends State<MainMenu> {
         child: Align(
           alignment: Alignment.topLeft,
           child: Container(
-            height: MediaQuery.of(context).size.height*0.8,
+            height: MediaQuery.of(context).size.height*0.9,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(height: 60,),
                     Container(
@@ -154,7 +155,7 @@ class _MainMenuState extends State<MainMenu> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        width: MediaQuery.of(context).size.width*0.5,
+                        width: MediaQuery.of(context).size.width*0.3,
                         child: const Divider(
                           thickness: 2, // thickness of the line
                           indent: 0, // empty space to the leading edge of divider.
@@ -172,9 +173,6 @@ class _MainMenuState extends State<MainMenu> {
                     ],
                   ),
                 )
-
-
-
 
               ],
             ),

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
+import 'package:serviceapp/Ui/main_page.dart';
 
 import '../../Screen/splash_screen.dart';
-import '../Home/home_page.dart';
 
 class IntroScreen extends StatefulWidget {
   IntroScreen({Key? key}) : super(key: key);
@@ -102,7 +102,7 @@ class IntroScreenState extends State<IntroScreen> {
 
   void onDonePress() {
     // Do what you want
-    Navigator.pushReplacement(context, PageTransition1(MyHomePage()));
+    Navigator.pushReplacement(context, PageTransition1(MainPage()));
   }
 
   Widget renderNextBtn() {

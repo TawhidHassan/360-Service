@@ -8,7 +8,7 @@ import '../../../Service/ThemeDataSave/theme_data_save.dart';
 import '../../Global/theme/app_themes.dart';
 import '../../Screen/splash_screen.dart';
 import '../../Widget/Button/material_button.dart';
-import '../Home/home_page.dart';
+
 
 class CredentialPage extends StatefulWidget {
   @override
@@ -24,6 +24,7 @@ class _CredentialPageState extends State<CredentialPage> {
         color: Theme.of(context).primaryColor,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.all(24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.center,

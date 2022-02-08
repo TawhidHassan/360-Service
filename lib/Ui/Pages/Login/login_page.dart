@@ -33,7 +33,8 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Text("Create your account",style:Theme.of(context).textTheme.headline1, textAlign: TextAlign.center,),
                   SizedBox(height: 12,),
-                  Text("Having trouble with home or office cleaning\nworkDon't worry! Find the best work for your\nplace toclean up.",style:Theme.of(context).textTheme.headline6, textAlign: TextAlign.start,),
+                  Text("Having trouble with home or office cleaning\nworkDon't worry! Find the best work for your\nplace toclean up.",
+                    style:Theme.of(context).textTheme.headline6, textAlign: TextAlign.start,),
                   SizedBox(height: 29,),
                 ],
               ),

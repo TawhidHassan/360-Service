@@ -40,7 +40,7 @@ dependencies:
   pandabar: ^0.1.1
   lottie: ^1.2.1
   flutter_svg: ^0.22.0
-  fluttertoast:
+  carousel_slider: ^4.0.0
   flutter:
     sdk: flutter
 
@@ -77,7 +77,7 @@ flutter:
   assets:
     - assets/images/
 #    - assets/lottie/
-#    - assets/icons/
+    - assets/icons/
     - assets/fonts/
     - assets/svg/
 

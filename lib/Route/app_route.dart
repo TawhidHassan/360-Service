@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:serviceapp/Bloc/Category/category_cubit.dart';
 import 'package:serviceapp/Bloc/Service/service_cubit.dart';
+import 'package:serviceapp/Ui/main_page.dart';
 
 import '../Bloc/Login/login_cubit.dart';
 import '../Constants/Strings/appStrings.dart';
-import '../Ui/Pages/Home/home_page.dart';
 import '../Ui/Pages/IntroSlider/intro_slider_page.dart';
 import '../Ui/Pages/Login/credential_page.dart';
 import '../Ui/Pages/Login/login_page.dart';
@@ -32,7 +32,7 @@ class AppRouter {
                 ),
 
               ],
-              child: MyHomePage(),
+              child: MainPage(),
             ));
       case SIGNUP_PAGE:
         return MaterialPageRoute(
@@ -72,7 +72,7 @@ class AppRouter {
                 ),
 
               ],
-              child: MyHomePage(),
+              child: MainPage(),
             ));
     }
   }

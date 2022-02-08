@@ -9,7 +9,6 @@ import 'Bloc/AppTheme/app_theme_bloc.dart';
 import 'Bloc/Category/category_cubit.dart';
 import 'Bloc/Service/service_cubit.dart';
 import 'Route/app_route.dart';
-import 'Ui/Pages/Home/home_page.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();

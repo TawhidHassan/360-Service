@@ -22,7 +22,7 @@ class AppTheme {
         bodyText2: TextStyle(color:Color(0xff233558)),
         headline1: TextStyle(color: Color(0xff233558),fontSize: 21,fontWeight: FontWeight.bold),
         headline2: TextStyle(color: Color(0xff233558),fontSize: 15,fontWeight: FontWeight.w600),
-        headline4: TextStyle(color: Color(0xff233558)),
+        headline4: TextStyle(color: Color(0xff233558),fontSize: 8,fontWeight: FontWeight.w600),
         headline6: TextStyle(color: Color(0xff233558),fontWeight: FontWeight.w600,fontSize: 16),
       ),
       unselectedWidgetColor: Colors.blue[400],
@@ -37,7 +37,7 @@ class AppTheme {
       primaryColor: Color(0xff191C47),
       scaffoldBackgroundColor: Color(0xff191C47),
       backgroundColor: Color(0xffffffff),
-      canvasColor: Color(0xff191C47 ),
+      canvasColor: Color(0xff262963 ),
       iconTheme: IconThemeData(
           color: Color(0xffffffff)
       ),
@@ -52,7 +52,7 @@ class AppTheme {
         bodyText2: TextStyle(color: Colors.white),
         headline1: TextStyle(color: Colors.white,fontSize: 21,fontWeight: FontWeight.bold),
         headline2: TextStyle(color: Color(0xffFFFFFF),fontSize: 15,fontWeight: FontWeight.w600),
-        headline4: TextStyle(color: Colors.white,),
+        headline4: TextStyle(color: Colors.white,fontSize: 8,fontWeight: FontWeight.w600),
         headline6: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 16),
       ),
       unselectedWidgetColor: Colors.white,

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
-import 'package:serviceapp/Ui/Pages/Home/home_page.dart';
+import 'package:serviceapp/Ui/main_page.dart';
 
 import '../../Bloc/AppTheme/app_theme_bloc.dart';
 import '../../Constants/Strings/appStrings.dart';
@@ -100,7 +100,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     Timer(Duration(seconds: 4), () {
       setState(() {
         isLogin?
-        Navigator.pushReplacement(context, PageTransition1(MyHomePage())): Navigator.pushReplacementNamed(
+        Navigator.pushReplacement(context, PageTransition1(MainPage())): Navigator.pushReplacementNamed(
             context, CREDENTIAL_PAGE);
         // isLogin?
         // Navigator.pushReplacement(context, PageTransition1(MyHomePage())): Navigator.pushReplacement(context, PageTransition1(MyHomePage()));
