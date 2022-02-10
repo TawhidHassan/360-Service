@@ -116,6 +116,36 @@ class _MainMenuState extends State<MainMenu> {
                             },
                             child:const MenuItem(name: "Setting",asset:Icons.info_outline)
                         ),
+                        InkWell(
+                            onTap: (){
+
+                            },
+                            child:const MenuItem(name: "Setting",asset:Icons.info_outline)
+                        ),InkWell(
+                            onTap: (){
+
+                            },
+                            child:const MenuItem(name: "Setting",asset:Icons.info_outline)
+                        ),InkWell(
+                            onTap: (){
+
+                            },
+                            child:const MenuItem(name: "Setting",asset:Icons.info_outline)
+                        ),InkWell(
+                            onTap: (){
+
+                            },
+                            child:const MenuItem(name: "Setting",asset:Icons.info_outline)
+                        ),InkWell(
+                            onTap: (){
+
+                            },
+                            child:const MenuItem(name: "Setting",asset:Icons.info_outline)
+                        ),
+
+
+
+
                         Container(
                             padding: EdgeInsets.all(12),
                             child: Column(

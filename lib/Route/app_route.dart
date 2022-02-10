@@ -7,9 +7,13 @@ import 'package:serviceapp/Ui/main_page.dart';
 
 import '../Bloc/Login/login_cubit.dart';
 import '../Constants/Strings/appStrings.dart';
+import '../Ui/Pages/Cart/cart_page.dart';
+import '../Ui/Pages/Category/all_category_page.dart';
+import '../Ui/Pages/Checkout/checkout_page.dart';
 import '../Ui/Pages/IntroSlider/intro_slider_page.dart';
 import '../Ui/Pages/Login/credential_page.dart';
 import '../Ui/Pages/Login/login_page.dart';
+import '../Ui/Pages/Service/categorywise_service_page.dart';
 import '../Ui/Pages/SignUp/signup_page.dart';
 import '../Ui/Screen/splash_screen.dart';
 
@@ -57,6 +61,30 @@ class AppRouter {
             builder: (BuildContext context) => BlocProvider(
               create: (context) => LoginCubit(),
               child: IntroScreen(),
+            ));
+      case ALL_CATEGORY_PAGE:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => BlocProvider(
+              create: (context) => LoginCubit(),
+              child: AllCategory(),
+            ));
+      case CATEGORY_SERVICE_PAGE:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => BlocProvider(
+              create: (context) => LoginCubit(),
+              child: CategoryWiseService(),
+            ));
+      case CART_PAGE:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => BlocProvider(
+              create: (context) => LoginCubit(),
+              child: CartPage(),
+            ));
+      case CHECKOUT_PAGE:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => BlocProvider(
+              create: (context) => LoginCubit(),
+              child: CheckoutPage(),
             ));
 
 

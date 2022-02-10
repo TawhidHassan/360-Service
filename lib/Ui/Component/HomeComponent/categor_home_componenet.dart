@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../Constants/Strings/appStrings.dart';
 import '../../Widget/Card/CategoryCard/category_card.dart';
 
 class CategoryHomeComponent extends StatelessWidget {
@@ -19,18 +20,27 @@ class CategoryHomeComponent extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Services by Category",style:Theme.of(context).textTheme.headline6, textAlign: TextAlign.start,),
-                  Text("VIEW ALL",style:TextStyle(fontSize: 10,color: Color(0xFF3879F0)), textAlign: TextAlign.start,),
+                  InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context, ALL_CATEGORY_PAGE);
+                      },
+                      child: Text("VIEW ALL",style:TextStyle(fontSize: 10,color: Color(0xFF3879F0)), textAlign: TextAlign.start,)
+                  ),
                 ],
               ),
             ),
           ),
           SizedBox(height: 16,),
           Expanded(
-            flex: 8,
+            flex: 9,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                CategoryCard(),
+                InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, CATEGORY_SERVICE_PAGE);
+                    },
+                    child: CategoryCard()),
                 CategoryCard(),
                 CategoryCard(),
                 CategoryCard(),

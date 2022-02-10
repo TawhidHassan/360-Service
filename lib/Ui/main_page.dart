@@ -2,11 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pandabar/main.view.dart';
 import 'package:pandabar/pandabar.dart';
+import 'package:serviceapp/Constants/Strings/appStrings.dart';
 import 'package:serviceapp/Ui/Widget/Menu/menu.dart';
 
 import 'Pages/Home/home_page.dart';
 import 'Pages/Login/credential_page.dart';
 import 'Pages/Order/order_page.dart';
+import 'Pages/Prtofile/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage();
@@ -119,23 +121,7 @@ class _MainPageState extends State<MainPage>with SingleTickerProviderStateMixin 
                 });
               },
               onFabButtonPressed: () {
-                showCupertinoDialog(
-                    context: context,
-                    builder: (context) {
-                      return CupertinoAlertDialog(
-                        content: Text('Fab Button Pressed!'),
-                        actions: <Widget>[
-                          CupertinoDialogAction(
-                            child: Text('Close'),
-                            isDestructiveAction: true,
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                          )
-                        ],
-                      );
-                    }
-                );
+                Navigator.pushNamed(context, CART_PAGE);
               },
             ),
             backgroundColor: Color(0xff3879F0) ,
@@ -231,10 +217,8 @@ class _MainPageState extends State<MainPage>with SingleTickerProviderStateMixin 
                           Container(
                             height: 400,
                             color: Colors.greenAccent,
-                          ),Container(
-                            height: 400,
-                            color: Colors.pink,
                           ),
+                          profilePage()
                         ],
                       ),
                     ),

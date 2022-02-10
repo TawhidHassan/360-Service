@@ -19,7 +19,7 @@ class AppTheme {
             color: Colors.black,
           fontSize: 16
         ),
-        bodyText2: TextStyle(color:Color(0xff233558)),
+        bodyText2: TextStyle(color: Color(0xff233558),fontSize: 14,fontWeight: FontWeight.w600),
         headline1: TextStyle(color: Color(0xff233558),fontSize: 21,fontWeight: FontWeight.bold),
         headline2: TextStyle(color: Color(0xff233558),fontSize: 15,fontWeight: FontWeight.w600),
         headline4: TextStyle(color: Color(0xff233558),fontSize: 8,fontWeight: FontWeight.w600),
@@ -42,14 +42,14 @@ class AppTheme {
           color: Color(0xffffffff)
       ),
       appBarTheme: AppBarTheme(
-        color: Color(0xff3879F0),
+        color: Color(0xff191C47),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       textTheme: TextTheme(
         bodyText1: const TextStyle(
             color: Colors.white
         ),
-        bodyText2: TextStyle(color: Colors.white),
+        bodyText2: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w600),
         headline1: TextStyle(color: Colors.white,fontSize: 21,fontWeight: FontWeight.bold),
         headline2: TextStyle(color: Color(0xffFFFFFF),fontSize: 15,fontWeight: FontWeight.w600),
         headline4: TextStyle(color: Colors.white,fontSize: 8,fontWeight: FontWeight.w600),

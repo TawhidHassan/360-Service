@@ -21,3 +21,13 @@ const SIGNUP_PAGE = "/sign_up_page";
 
 
 const INTRO_PAGE = "/intro_page";
+
+//category
+const ALL_CATEGORY_PAGE = "/all_category_page";
+
+//category service
+const CATEGORY_SERVICE_PAGE = "/category_service_page";
+
+//cart
+const CART_PAGE = "/cart_page";
+const CHECKOUT_PAGE = "/checkout_page";
