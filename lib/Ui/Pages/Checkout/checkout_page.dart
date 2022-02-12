@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../Constants/Strings/appStrings.dart';
 import '../../Widget/Button/material_button.dart';
 
 class CheckoutPage extends StatelessWidget {
@@ -268,7 +269,7 @@ class CheckoutPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: MaterialNormalButton(color: Color(0XFF3879F0),text: "Confirm",textColor: Colors.white,tap: (){
-
+                Navigator.pushNamed(context, DELIVERY_DATE_TIME_PAGE);
               },),
             ),
 

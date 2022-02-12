@@ -31,3 +31,6 @@ const CATEGORY_SERVICE_PAGE = "/category_service_page";
 //cart
 const CART_PAGE = "/cart_page";
 const CHECKOUT_PAGE = "/checkout_page";
+const DELIVERY_DATE_TIME_PAGE = "/delivery_date_time_page";
+const MAP_DELIVERY_PAGE = "/map_delivery_page";
+const SERVICE_UNDER_SERVICE_LIST_PAGE = "/service_under_srervice_list_page";

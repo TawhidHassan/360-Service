@@ -15,10 +15,10 @@ class PopularServiceCard extends StatelessWidget {
         color: Theme.of(context).canvasColor,
         boxShadow: [
           BoxShadow(
-            color: Color(0xFF3879F0).withOpacity(0.2),
+            color: Color(0xFF3879F0).withOpacity(0.1),
             spreadRadius: 5,
             blurRadius: 9,
-            offset: Offset(0, 3), // changes position of shadow
+            offset: Offset(0, 13), // changes position of shadow
           ),
         ],
       ),

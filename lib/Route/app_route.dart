@@ -10,10 +10,13 @@ import '../Constants/Strings/appStrings.dart';
 import '../Ui/Pages/Cart/cart_page.dart';
 import '../Ui/Pages/Category/all_category_page.dart';
 import '../Ui/Pages/Checkout/checkout_page.dart';
+import '../Ui/Pages/Dalivery/delivery_date_time.dart';
 import '../Ui/Pages/IntroSlider/intro_slider_page.dart';
 import '../Ui/Pages/Login/credential_page.dart';
 import '../Ui/Pages/Login/login_page.dart';
+import '../Ui/Pages/Map/map_delivery_service.dart';
 import '../Ui/Pages/Service/categorywise_service_page.dart';
+import '../Ui/Pages/Service/service_under_service_details_list.dart';
 import '../Ui/Pages/SignUp/signup_page.dart';
 import '../Ui/Screen/splash_screen.dart';
 
@@ -85,6 +88,24 @@ class AppRouter {
             builder: (BuildContext context) => BlocProvider(
               create: (context) => LoginCubit(),
               child: CheckoutPage(),
+            ));
+      case DELIVERY_DATE_TIME_PAGE:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => BlocProvider(
+              create: (context) => LoginCubit(),
+              child: DeliveryDateTimePage(),
+            ));
+      case MAP_DELIVERY_PAGE:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => BlocProvider(
+              create: (context) => LoginCubit(),
+              child: MapDelivery(),
+            ));
+      case SERVICE_UNDER_SERVICE_LIST_PAGE:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => BlocProvider(
+              create: (context) => LoginCubit(),
+              child: ServiceUnderServiceDetails(),
             ));
 
 

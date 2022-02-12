@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../Constants/Strings/appStrings.dart';
 import '../../Widget/Button/profile_button.dart';
 import '../../Widget/Card/CategoryCard/category_card.dart';
 
@@ -48,7 +49,9 @@ class CategoryWiseService extends StatelessWidget {
               color: Theme.of(context).canvasColor,
               child: Column(
                 children: [
-                  ProfilePageButton(color:Color(0xFFFFFFFF),icons: Icons.nature_people,textColor: Colors.grey,text: "Floor Cleaning",tap: (){},),
+                  ProfilePageButton(color:Color(0xFFFFFFFF),icons: Icons.nature_people,textColor: Colors.grey,text: "Floor Cleaning",tap: (){
+                    Navigator.pushNamed(context, SERVICE_UNDER_SERVICE_LIST_PAGE);
+                  },),
                   ProfilePageButton(color:Color(0xFFFFFFFF),icons: Icons.calendar_today_outlined,textColor: Colors.grey,text: "Carpet Cleaning",tap: (){},),
                   ProfilePageButton(color:Color(0xFFFFFFFF),icons: Icons.wifi_tethering_outlined,textColor: Colors.grey,text: "Sofa wash",tap: (){},),
                   ProfilePageButton(color:Color(0xFFFFFFFF),icons: Icons.circle_notifications,textColor: Colors.grey,text: "Glass Cleaning",tap: (){},),
